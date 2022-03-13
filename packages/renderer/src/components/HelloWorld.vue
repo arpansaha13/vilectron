@@ -23,10 +23,16 @@
   </p>
 </template>
 
-<script>
-import { ref } from 'vue'
+<style scoped>
+a {
+  color: #42b983;
+}
+</style>
 
-export default {
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
   props: {
     msg: {
       type: String,
@@ -37,11 +43,5 @@ export default {
 
     return { count }
   },
-}
+})
 </script>
-
-<style scoped>
-a {
-  color: #42b983;
-}
-</style>
