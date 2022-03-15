@@ -13,6 +13,9 @@
       "dom"
     ],
     "baseUrl": ".",
+    "types": [
+      "vite/client"
+    ],
     "paths": {
       "~/*": ["src/*"],
     },
