@@ -17,13 +17,9 @@
       <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
     </p>
 
-    <button
-      type="button"
-      class="my-4 inline-flex items-center px-2.5 py-1.5 border border-transparent text-sm font-medium rounded shadow-sm text-white bg-emerald-600 hover:bg-emerald-700"
-      @click="count++"
-    >
-      Count is: {{ count }}
-    </button>
+    <Button @click="count.count++">
+      Count is: {{ count.count }}
+    </Button>
     <p>
       Edit
       <code class="text-sm">components/HelloWorld.vue</code> to test hot module replacement.
@@ -31,25 +27,30 @@
   </div>
 </template>
 
-<style scoped>
-a {
-  @apply text-emerald-500;
-}
-</style>
-
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
+import Button from '~/components/Button.vue'
+import { useCount } from '~/stores/count'
 
 export default defineComponent({
+  components: {
+    Button,
+  },
   props: {
     msg: {
       type: String,
     },
   },
   setup() {
-    const count = ref(0)
+    const count = useCount()
 
     return { count }
   },
 })
 </script>
+
+<style scoped>
+a {
+  @apply text-emerald-600 dark:text-emerald-500;
+}
+</style>

@@ -2,13 +2,12 @@
   <header class="py-8 lg:py-16">
     <TabGroup>
       <TabList class="mx-auto w-max flex space-x-6">
-        <Tab as="template" v-for="tab in tabs" :key="tab.name" v-slot="{ active, selected }">
+        <Tab as="template" v-for="tab in tabs" :key="tab.name" v-slot="{ selected }">
           <router-link
             :to="tab.to"
             :class="[
-              'flex items-center',
-              active && !selected ? 'text-gray-100' : '',
-              selected ? 'text-emerald-500 hover:text-emerald-600 transition-colors' : '',
+              'flex items-center transition-colors',
+              selected ? 'text-emerald-600 hover:text-emerald-700 dark:text-emerald-500 dark:hover:text-emerald-600' : 'text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100',
             ]"
           >
             <component
