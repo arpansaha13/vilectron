@@ -6,7 +6,7 @@ import App from '~/App.vue'
 import './styles/main.css'
 
 const router = createRouter({
-  history: (import.meta.env.DEV ? createWebHistory : createWebHashHistory)(import.meta.env.BASE_URL),
+  history: (import.meta.env.DEV ? createWebHistory : createWebHashHistory)(),
   routes,
 })
 

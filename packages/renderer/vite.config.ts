@@ -26,6 +26,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['vue'],
+    include: ['vue', 'vue-router'],
   },
 })
