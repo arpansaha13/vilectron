@@ -17,7 +17,7 @@ export default defineConfig({
       external: [
         'electron',
         ...builtinModules, // node built in modules
-        ...Object.keys(pkg.dependencies || {}), // project dependencies
+        ...Object.keys(pkg.dependencies ?? {}), // project dependencies
       ],
     },
   },

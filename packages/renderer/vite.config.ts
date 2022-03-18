@@ -1,13 +1,19 @@
 import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
+import Vue from '@vitejs/plugin-vue'
+import Pages from 'vite-plugin-pages'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   mode: process.env.NODE_ENV,
   root: __dirname,
   plugins: [
-    Vue()
+    Vue(),
+
+    // https://github.com/hannoeru/vite-plugin-pages
+    Pages({
+      extensions: ['vue'],
+    }),
   ],
   base: './',
   build: {
@@ -20,6 +26,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['vue'],
+    include: ['vue', 'vue-router', '@vueuse/core'],
   },
 })
