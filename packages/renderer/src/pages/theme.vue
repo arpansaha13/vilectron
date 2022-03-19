@@ -10,7 +10,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
 import Button from '~/components/Button.vue'
 import { isDark, toggle } from '~/composables/useDark'
 

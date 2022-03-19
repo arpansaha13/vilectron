@@ -1,7 +1,6 @@
-import { createApp } from 'vue'
-import routes from 'virtual:generated-pages'
 import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 import { createPinia } from 'pinia'
+import routes from 'virtual:generated-pages'
 import App from '~/App.vue'
 
 import './styles/main.css'

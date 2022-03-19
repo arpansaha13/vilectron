@@ -6,7 +6,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
 import Navbar from '~/components/Navbar.vue'
 
 export default defineComponent({
