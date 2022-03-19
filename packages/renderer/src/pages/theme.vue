@@ -10,13 +10,9 @@
 </template>
 
 <script lang="ts">
-import Button from '~/components/Button.vue'
 import { isDark, toggle } from '~/composables/useDark'
 
 export default defineComponent({
-  components: {
-    Button,
-  },
   setup() {
     function toggleDark() {
       toggle()

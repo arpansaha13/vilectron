@@ -6,12 +6,7 @@
 </template>
 
 <script lang="ts">
-import Navbar from '~/components/Navbar.vue'
-
 export default defineComponent({
-  components: {
-    Navbar,
-  },
   setup() {
     onMounted(() => { console.log('mounted') })
   },
