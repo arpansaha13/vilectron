@@ -1,20 +1,16 @@
 <template>
-  <div class="w-full min-h-screen bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-50 transition-colors">
-    <Navbar />
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
-import Navbar from '~/components/Navbar.vue'
+import { toggle } from '~/composables/useDark'
 
 export default defineComponent({
-  components: {
-    Navbar,
-  },
   setup() {
-    onMounted(() => { console.log('mounted') })
+    // Use system theme preference
+    const prefersDark = usePreferredDark()
+
+    watch(prefersDark, () => { toggle(prefersDark.value) })
   },
 })
 </script>

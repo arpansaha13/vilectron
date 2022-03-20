@@ -8,13 +8,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from '~/components/HelloWorld.vue' // Use ~/ alias to refer to the src directory
-
 export default defineComponent({
-  components: {
-    HelloWorld,
-  },
   setup() {
     const imgs = [
       { src: './electron.png', alt: 'Electron logo', },

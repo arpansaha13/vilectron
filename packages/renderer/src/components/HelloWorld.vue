@@ -28,14 +28,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import Button from '~/components/Button.vue'
 import { useCount } from '~/stores/count'
 
 export default defineComponent({
-  components: {
-    Button,
-  },
   props: {
     msg: {
       type: String,

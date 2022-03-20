@@ -6,10 +6,11 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    minWidth: 650,
+    minHeight:500,
     title: 'Vilectron',
     webPreferences: {
       preload: join(__dirname, '../preload/index.cjs'), // path to built preload script (in dist folder)
-      nodeIntegration: true,
     },
   })
 

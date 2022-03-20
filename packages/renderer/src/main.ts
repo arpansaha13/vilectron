@@ -1,7 +1,7 @@
-import { createApp } from 'vue'
-import routes from 'virtual:generated-pages'
 import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 import { createPinia } from 'pinia'
+import generatedRoutes from 'virtual:generated-pages'
+import { setupLayouts } from 'virtual:generated-layouts'
 import App from '~/App.vue'
 
 import './styles/main.css'
@@ -9,6 +9,7 @@ import './styles/main.css'
 const app = createApp(App)
 
 // Router
+const routes = setupLayouts(generatedRoutes)
 const router = createRouter({
   history: (import.meta.env.DEV ? createWebHistory : createWebHashHistory)(),
   routes,

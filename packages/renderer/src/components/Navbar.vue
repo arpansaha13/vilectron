@@ -25,8 +25,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-
 // https://headlessui.dev/vue/tabs
 import { TabGroup, TabList, Tab } from '@headlessui/vue'
 
