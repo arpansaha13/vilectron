@@ -1,10 +1,18 @@
 {
+  "private": true,
+  "packageManager": "pnpm@7.1.9",
   "name": "vilectron",
-  "packageManager": "pnpm@6.32.3",
-  "author": "lemontreejs",
+  "author": "Arpan Saha <https://github.com/arpansaha13>",
   "description": "Simple Electron-Vite starter template with VueJs and Tailwind",
   "version": "1.0.0",
   "main": "dist/main/index.cjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arpansaha13/vilectron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arpansaha13/vilectron/issues"
+  },
   "scripts": {
     "dev": "vite ./packages/renderer --open",
     "typecheck": "vue-tsc --project packages/renderer/tsconfig.json --noEmit",
@@ -17,33 +25,26 @@
     "app:build": "pnpm electron:build && pnpm electron:release"
   },
   "devDependencies": {
-    "@headlessui/vue": "^1.5.0",
+    "@headlessui/vue": "^1.6.5",
     "@heroicons/vue": "^1.0.6",
-    "@vitejs/plugin-vue": "^2.2.4",
-    "@vueuse/core": "^8.1.2",
-    "electron": "^17.1.2",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vueuse/core": "^8.7.5",
+    "electron": "^17.4.8",
     "electron-builder": "^22.14.13",
-    "pinia": "^2.0.12",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.23",
-    "typescript": "^4.6.2",
-    "unplugin-auto-import": "^0.6.6",
-    "unplugin-vue-components": "^0.18.3",
-    "vite": "^2.8.6",
+    "pinia": "^2.0.14",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.4",
+    "typescript": "^4.7.4",
+    "unplugin-auto-import": "^0.6.9",
+    "unplugin-vue-components": "^0.18.5",
+    "vite": "^2.9.13",
     "vite-plugin-pages": "^0.21.4",
     "vite-plugin-vue-layouts": "^0.6.0",
-    "vue": "^3.2.31",
-    "vue-router": "^4.0.14",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.16",
     "vue-tsc": "^0.32.1"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lemontreejs/vilectron.git"
-  },
-  "bugs": {
-    "url": "https://github.com/lemontreejs/vilectron/issues"
   }
 }
