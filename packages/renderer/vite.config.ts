@@ -23,11 +23,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
-      imports: [
-        'vue',
-        'vue-router',
-        '@vueuse/core',
-      ],
+      imports: ['vue', 'vue-router', '@vueuse/core'],
       dts: 'src/auto-imports.d.ts',
     }),
 
@@ -50,6 +46,13 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['vue', 'vue-router', '@vueuse/core'],
+    include: [
+      'vue',
+      'vue-router',
+      '@vueuse/core',
+      '@headlessui/vue',
+      '@heroicons/vue/solid',
+      '@heroicons/vue/outline',
+    ],
   },
 })
