@@ -10,7 +10,9 @@ export default defineComponent({
     // Use system theme preference
     const prefersDark = usePreferredDark()
 
-    watch(prefersDark, () => { toggle(prefersDark.value) })
+    watch(prefersDark, () => {
+      toggle(prefersDark.value)
+    })
   },
 })
 </script>

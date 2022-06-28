@@ -1,12 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "strict": true,
+    "target": "esnext",
+    "module": "esnext",
+    "useDefineForClassFields": true,
+    "moduleResolution": "node",
+    "jsx": "preserve",
     "resolveJsonModule": true,
+    "noUnusedLocals": true,
     "esModuleInterop": true,
     "lib": [
       "esnext",
@@ -19,7 +21,9 @@
       "vite-plugin-vue-layouts/client",
     ],
     "paths": {
-      "~/*": ["src/*"],
+      "~/*": [
+        "src/*"
+      ],
     },
   },
   "include": [

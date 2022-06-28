@@ -2,9 +2,7 @@
   <main class="py-16 lg:py-20 mx-auto max-w-7xl">
     <div class="flex flex-col items-center space-y-6">
       Current theme: {{ isDark ? 'Dark' : 'Light' }}
-      <Button @click="toggleDark">
-        Toggle theme
-      </Button>
+      <Button @click="toggleDark"> Toggle theme </Button>
     </div>
   </main>
 </template>

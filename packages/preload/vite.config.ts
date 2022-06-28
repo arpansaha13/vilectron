@@ -10,6 +10,6 @@ export default defineConfig({
       formats: ['cjs'],
       fileName: () => '[name].cjs',
     },
-    minify: process.env.NODE_ENV === 'production', /* from mode option */
+    minify: process.env.NODE_ENV === 'production' /* from mode option */,
   },
 })

@@ -7,7 +7,7 @@ function createWindow() {
     width: 800,
     height: 600,
     minWidth: 650,
-    minHeight:500,
+    minHeight: 500,
     title: 'Vilectron',
     webPreferences: {
       preload: join(__dirname, '../preload/index.cjs'), // path to built preload script (in dist folder)
@@ -44,6 +44,5 @@ app.whenReady().then(() => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin')
-    app.quit()
+  if (process.platform !== 'darwin') app.quit()
 })

@@ -11,9 +11,9 @@
 export default defineComponent({
   setup() {
     const imgs = [
-      { src: './electron.png', alt: 'Electron logo', },
-      { src: './vue.png', alt: 'Vue logo', },
-      { src: './vite.svg', alt: 'Vite logo', },
+      { src: './electron.png', alt: 'Electron logo' },
+      { src: './vue.png', alt: 'Vue logo' },
+      { src: './vite.svg', alt: 'Vite logo' },
     ]
 
     return { imgs }

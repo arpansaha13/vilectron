@@ -1,15 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
+    "strict": true,
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
+    "noUnusedLocals": true,
     "sourceMap": true,
     "baseUrl": "./",
-    "strict": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+  },
+  "exclude": [
+    "dist",
+    "release",
+    "node_modules",
+    "dist_electron",
+  ]
 }
