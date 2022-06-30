@@ -5,7 +5,7 @@ module.exports = {
     './packages/renderer/src/pages/**/*.{vue,js,ts}',
     './packages/renderer/src/layouts/**/*.{vue,js,ts}',
     './packages/renderer/src/components/**/*.{vue,js,ts}',
-    './packages/renderer/src/styles/**/*.{vue,js,ts}',
+    './packages/renderer/src/styles/**/*.css',
   ],
   darkMode: 'class',
   theme: {
