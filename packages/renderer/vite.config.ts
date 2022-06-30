@@ -5,6 +5,7 @@ import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import Unocss from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -34,6 +35,9 @@ export default defineConfig({
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
     }),
+
+    // https://github.com/unocss/unocss
+    Unocss(),
   ],
   base: './',
   build: {
