@@ -55,8 +55,6 @@ export default defineConfig({
       'vue-router',
       '@vueuse/core',
       '@headlessui/vue',
-      '@heroicons/vue/solid',
-      '@heroicons/vue/outline',
     ],
   },
 })

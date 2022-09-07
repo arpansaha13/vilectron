@@ -6,20 +6,19 @@
           as="template"
           v-for="tab in tabs"
           :key="tab.name"
-          v-slot="{ selected }"
         >
-          <router-link
-            :to="tab.to"
+          <button
             :class="[
-              'flex items-center transition-colors',
-              selected
+              'flex items-center transition-colors outline-none',
+              $route.path === tab.to
                 ? 'text-emerald-600 hover:text-emerald-700 dark:text-emerald-500 dark:hover:text-emerald-600'
                 : 'text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-100',
             ]"
+            @click="$router.push(tab.to)"
           >
             <component :is="tab.icon" :class="['mr-2 w-6 h-6 flex-shrink-0']" />
             <span class="inline-block">{{ tab.name }}</span>
-          </router-link>
+          </button>
         </Tab>
       </TabList>
     </TabGroup>
@@ -31,7 +30,7 @@
 import { TabGroup, TabList, Tab } from '@headlessui/vue'
 
 // https://heroicons.com/
-import { HomeIcon, ColorSwatchIcon } from '@heroicons/vue/solid'
+import { HomeIcon, SwatchIcon } from '@heroicons/vue/24/solid'
 
 export default defineComponent({
   components: {
@@ -39,7 +38,7 @@ export default defineComponent({
     TabList,
     Tab,
     HomeIcon,
-    ColorSwatchIcon,
+    SwatchIcon,
   },
   setup() {
     const tabs = [
@@ -50,7 +49,7 @@ export default defineComponent({
       },
       {
         to: '/theme',
-        icon: ColorSwatchIcon,
+        icon: SwatchIcon,
         name: 'Theme',
       },
     ]
