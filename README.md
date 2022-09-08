@@ -47,15 +47,15 @@ This will run `electron-builder` to package your app.
 
 # Variations
 
-- [With tailwind](https://github.com/arpansaha13/vilectron/tree/tailwind) - Use TailwindCSS instead of UnoCSS
+- [With tailwind](https://github.com/arpansaha13/vilectron/tree/tailwind-postcss) - Use Tailwind with PostCSS instead of UnoCSS
 
 # Checklist
 
 When you use this template, try to follow the checklist to update your info properly
 
 - [ ] Change the author name in `LICENSE`
-- [ ] Change the title in `App.vue`
-- [ ] Change the favicon in `public`
+- [ ] Change the title in `App.vue` in `packages/renderer`
+- [ ] Change the favicon in `packages/renderer/public`
 - [ ] Clean up the READMEs and remove routes
 - [ ] Change `author`, `name`, `version` and `description` in `package.json`
 - [ ] Remove or change `repository` and `bugs` in `package.json`
