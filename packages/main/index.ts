@@ -14,18 +14,18 @@ function createWindow() {
     },
   })
 
-  const isProd = app.isPackaged
+  const isDev = typeof process.env.VITE_DEV_SERVER_HOST !== 'undefined'
 
-  // Load the index.html of paskaged app
+  // Load the index.html of packaged app
   // In case of dev mode, open the vite dev server that was created in scripts/watch.mjs
   mainWindow.loadURL(
-    isProd
-      ? `file://${join(__dirname, '../renderer/index.html')}`
-      : `http://${process.env['VITE_DEV_SERVER_HOST']}:${process.env['VITE_DEV_SERVER_PORT']}`
+    isDev
+      ? `http://${process.env.VITE_DEV_SERVER_HOST}:${process.env.VITE_DEV_SERVER_PORT}`
+      : `file://${join(__dirname, '../renderer/index.html')}`
   )
   // Open the DevTools.
   // Use { mode: 'detach' } to open the app and dev tools in seperate windows
-  if (!isProd) mainWindow.webContents.openDevTools()
+  if (isDev) mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

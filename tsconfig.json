@@ -9,10 +9,13 @@
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "sourceMap": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
   },
+  "include": [
+    "packages"
+  ],
   "exclude": [
     "dist",
     "release",

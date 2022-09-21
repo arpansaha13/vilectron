@@ -30,5 +30,6 @@
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.vue",
+    "tests/**/*.spec.ts"
   ]
 }
