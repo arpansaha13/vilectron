@@ -1,17 +1,19 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "allowJs": false,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "importHelpers": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "noUnusedLocals": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
     "sourceMap": true,
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
   },
   "include": [
     "packages"

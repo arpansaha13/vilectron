@@ -1,20 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "strict": true,
-    "target": "esnext",
-    "module": "esnext",
-    "useDefineForClassFields": true,
-    "moduleResolution": "node",
+    "baseUrl": ".",
     "jsx": "preserve",
-    "resolveJsonModule": true,
-    "noUnusedLocals": true,
     "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "useDefineForClassFields": true,
     "lib": [
       "esnext",
       "dom"
     ],
-    "baseUrl": ".",
     "types": [
       "vite/client",
       "vite-plugin-pages/client",
@@ -28,8 +23,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.d.ts",
     "src/**/*.vue",
+    "src/**/*.d.ts",
     "tests/**/*.spec.ts"
   ]
 }
