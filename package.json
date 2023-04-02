@@ -1,11 +1,10 @@
 {
-  "private": true,
-  "packageManager": "pnpm@7.21.0",
   "name": "vilectron",
   "author": "Arpan Saha <https://github.com/arpansaha13>",
-  "description": "Simple Electron-Vite starter template with VueJs",
-  "version": "1.0.0",
-  "main": "dist/main/index.cjs",
+  "description": "Opinionated nuxt-electron starter template",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist-electron/electron/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/arpansaha13/vilectron.git"
@@ -13,46 +12,41 @@
   "bugs": {
     "url": "https://github.com/arpansaha13/vilectron/issues"
   },
-  "engines": {
-    "node": ">=16.0.0"
-  },
   "scripts": {
-    "dev": "vite ./packages/renderer --open",
-    "typecheck": "vue-tsc --project packages/renderer/tsconfig.json --noEmit",
-    "build": "pnpm typecheck && vite build ./packages/renderer",
-    "preview": "vite ./dist/renderer",
-    "test": "pnpm test:renderer && pnpm test:app",
-    "test:app": "vitest run",
-    "test:renderer": "vitest run -r packages/renderer",
-    "electron:dev": "node scripts/watch.mjs",
-    "electron:build": "pnpm typecheck && node scripts/build.mjs",
-    "electron:release": "electron-builder",
-    "app:build": "pnpm electron:build && pnpm electron:release"
+    "build": "nuxt generate && electron-builder",
+    "dev": "nuxt dev",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "engines": {
+    "node": "^16.15.0"
   },
   "devDependencies": {
-    "@headlessui/vue": "^1.7.7",
-    "@heroicons/vue": "^2.0.13",
-    "@pinia/testing": "^0.0.14",
-    "@unocss/reset": "^0.48.0",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "@vue/test-utils": "^2.2.6",
-    "@vueuse/core": "^9.9.0",
-    "electron": "^22.0.0",
+    "@nuxt/image-edge": "1.0.0-27954023.4cee565",
+    "@nuxtjs/color-mode": "^3.2.0",
+    "@pinia/nuxt": "^0.4.6",
+    "@unocss/nuxt": "^0.47.5",
+    "@vueuse/nuxt": "^9.6.0",
+    "electron": "^23.2.1",
     "electron-builder": "^23.6.0",
-    "jsdom": "^20.0.3",
-    "pinia": "^2.0.28",
-    "playwright": "^1.29.1",
-    "postcss": "^8.4.20",
-    "typescript": "^4.9.4",
-    "unocss": "^0.48.0",
-    "unplugin-auto-import": "^0.12.1",
-    "unplugin-vue-components": "^0.22.12",
-    "vite": "^4.0.3",
-    "vite-plugin-pages": "^0.28.0",
-    "vite-plugin-vue-layouts": "^0.7.0",
-    "vitest": "^0.26.3",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6",
-    "vue-tsc": "^1.0.19"
+    "nuxt": "^3.2.3",
+    "nuxt-electron": "^0.4.5",
+    "nuxt-headlessui": "^1.1.1",
+    "nuxt-icon": "^0.3.2",
+    "pinia": "^2.0.27",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.3",
+    "vite-electron-plugin": "^0.8.2",
+    "vite-plugin-electron-renderer": "^0.13.14"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "vue",
+        "vite",
+        "esbuild",
+        "webpack"
+      ]
+    }
   }
 }

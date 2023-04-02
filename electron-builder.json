@@ -1,12 +1,12 @@
 {
-  "appId": "YouAppID",
-  "productName": "vilectron",
-  "asar": true,
+  "appId": "your.app.id",
+  "asar": false,
   "directories": {
     "output": "release/${version}"
   },
   "files": [
-    "dist"
+    ".output/**/*",
+    "dist-electron"
   ],
   "mac": {
     "artifactName": "${productName}_${version}.${ext}",
@@ -29,6 +29,6 @@
     "oneClick": false,
     "perMachine": false,
     "allowToChangeInstallationDirectory": true,
-    "deleteAppDataOnUninstall": true
+    "deleteAppDataOnUninstall": false
   }
 }
