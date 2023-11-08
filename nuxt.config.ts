@@ -9,11 +9,11 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
 
-    // https://color-mode.nuxtjs.org/
+    // https://color-mode.nuxtjs.org
     '@nuxtjs/color-mode',
 
-    // https://v1.image.nuxtjs.org/
-    '@nuxt/image-edge',
+    // https://image.nuxt.com
+    '@nuxt/image',
 
     // https://nuxt.com/modules/icon
     'nuxt-icon',

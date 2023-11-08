@@ -30,7 +30,7 @@
 - [Prettier](https://prettier.io/) - Opinionated code formatter.
 - [TypeScript](https://www.typescriptlang.org/) - Why not?
 
-> If you use a different Node version other than **v16**, remember to update the version in `engines.node` in package.json.
+> This template requires node v16 and above.
 
 # Quick start
 
