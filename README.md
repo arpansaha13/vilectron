@@ -16,21 +16,29 @@
 
 ## Nuxt 3 Modules
 
+- [NuxtUI](https://ui.nuxt.com) - A UI Library for Modern Web Apps.
 - [VueUse](https://vueuse.org) - Collection of Vue Composition Utilities.
-- [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand Atomic CSS engine.
 - [Pinia](https://pinia.vuejs.org) - The Vue Store that you will enjoy using.
 - [Headless UI](https://headlessui.com) - Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
-- [Color mode](https://color-mode.nuxtjs.org) - Dark and Light mode with auto detection made easy with Nuxt 🌗.
 - [Image](https://v1.image.nuxtjs.org) - Plug-and-play image optimization for Nuxt apps.
-- [Iconify](https://iconify.design) - All popular icon sets, one framework.
+
+> These are the pre-packed modules in this starter template. Feel free to ditch any module you won't be using.
+
+## Nuxt UI Modules
+
+These modules are pre-packed with the Nuxt UI module.
+
+- [TailwindCSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
+- [Color mode](https://color-mode.nuxtjs.org) - Dark and Light mode with auto-detection made easy with Nuxt 🌗.
+- [Icon](https://nuxt.com/modules/icon) - Icon module for Nuxt with 100,000+ ready to use icons from Iconify.
+
+> Nuxt UI includes components powered by Headless UI, but the [nuxt-headlessui](https://nuxt.com/modules/headlessui) module is also added separately to enable native Headless UI syntax and functionality.
 
 ## Other Features
 
 - [pnpm](https://pnpm.io/) - Fast, disk space efficient package manager.
 - [Prettier](https://prettier.io/) - Opinionated code formatter.
 - [TypeScript](https://www.typescriptlang.org/) - Why not?
-
-> This template requires node v16 and above.
 
 # Quick start
 
@@ -57,3 +65,4 @@ When you use this template, try to follow the checklist to update your info prop
 - [ ] Change `author`, `name`, `version` and `description` in `package.json`
 - [ ] Remove or change `repository` and `bugs` in `package.json`
 - [ ] Clean up the READMEs
+- [ ] Remove any modules you won't be needing.

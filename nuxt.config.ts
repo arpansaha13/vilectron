@@ -1,22 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
+
   app: {
     baseURL: './',
   },
+
   modules: [
+    // https://vueuse.org/
     '@vueuse/nuxt',
-    '@unocss/nuxt',
+
+    // https://pinia.vuejs.org/
     '@pinia/nuxt',
 
-    // https://color-mode.nuxtjs.org
-    '@nuxtjs/color-mode',
+    // https://ui.nuxt.com/
+    '@nuxt/ui',
 
     // https://image.nuxt.com
     '@nuxt/image',
-
-    // https://nuxt.com/modules/icon
-    'nuxt-icon',
 
     // https://nuxt.com/modules/headlessui
     'nuxt-headlessui',
@@ -24,14 +25,19 @@ export default defineNuxtConfig({
     // https://nuxt.com/modules/electron
     'nuxt-electron',
   ],
-  css: ['@unocss/reset/tailwind.css', 'assets/main.css'],
+
+  css: ['assets/main.css'],
+
   colorMode: {
     preference: 'dark',
     classPrefix: '',
     classSuffix: '',
   },
+
   electron: {
     include: ['electron'],
     outDir: 'dist-electron',
   },
+
+  compatibilityDate: '2024-09-29',
 })

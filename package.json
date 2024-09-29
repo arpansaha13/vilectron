@@ -22,21 +22,19 @@
     "node": ">=16.0.0"
   },
   "devDependencies": {
-    "@nuxt/image": "^1.0.0",
-    "@nuxtjs/color-mode": "^3.3.0",
+    "@nuxt/image": "^1.8.0",
+    "@nuxt/ui": "^2.18.6",
     "@pinia/nuxt": "^0.4.11",
-    "@unocss/nuxt": "^0.47.6",
     "@vueuse/nuxt": "^9.13.0",
     "electron": "^23.3.13",
     "electron-builder": "^23.6.0",
-    "nuxt": "^3.8.0",
+    "nuxt": "^3.13.2",
     "nuxt-electron": "^0.4.5",
-    "nuxt-headlessui": "^1.1.4",
-    "nuxt-icon": "^0.3.3",
-    "pinia": "^2.1.7",
+    "nuxt-headlessui": "^1.2.0",
+    "pinia": "^2.2.2",
     "prettier": "^2.8.8",
     "typescript": "^4.9.5",
-    "vite-electron-plugin": "^0.8.2",
+    "vite-electron-plugin": "^0.8.3",
     "vite-plugin-electron-renderer": "^0.13.14"
   },
   "pnpm": {
